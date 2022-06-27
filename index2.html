@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iframe2</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>iframe2</div>
+    <script>
+      setTimeout(() => {
+        console.log("iframe2: post message to parent");
+        window.parent.postMessage({ id: "from-child-iframe2" }, "*");
+      }, 1000);
+    </script>
+  </body>
+</html>
